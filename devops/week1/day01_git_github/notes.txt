@@ -1,0 +1,10 @@
+## Git Commands Notes ##
+
+Git Cheat Sheet:
+git init - initialize repo
+git add - add files
+git commit - save changes
+git push - upload to GitHub
+
+Workflow:
+Working → Staging → Repository
