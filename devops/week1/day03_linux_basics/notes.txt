@@ -1,1 +1,18 @@
+<<<<<<< HEAD
+=======
+Linux Commands :
+ls - list files
+cd - change directory
+mkdir - create directory
+touch - create folder
+cat - create file
+grep - search text
+find - search files
+chmod - change permissions
+ps - show processes
+top - show running processes
+
+Shell Script :
+Used to automate tasks using bash
+>>>>>>> ba23826 (Added Day 3 Linux basics)
 
