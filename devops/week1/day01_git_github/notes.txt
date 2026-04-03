@@ -5,6 +5,38 @@ git init - initialize repo
 git add - add files
 git commit - save changes
 git push - upload to GitHub
+git clone <url> - Clone existing repository
+git status - Show current status
+git add <file> - Add specific file
+git add . - Add all files
+git commit -m "msg" - Save changes with message
+git branch - List branches
+git branch <name> - Create new branch
+git checkout <name> - Switch branch
+git checkout -b <name> - Create + switch branch
+git branch -M main - Rename branch to main
+git remote add origin <url> - Add remote repo
+git remote -v - Show remote URLs
+git remote remove origin - Remove remote
+git push -u origin main - Push code to GitHub (set upstream)
+git push - Push changes
+git pull - Fetch + merge updates
+git fetch - Download updates only
+git log - Show commit history
+git log --oneline - Short log
+git restore <file> - Discard changes
+git reset <file> - Unstage file
+git reset --hard - Reset everything (dangerous)
+git branch -vv - Show branch + upstream
+git diff - Show changes
+
+
+Git = Version Control System
+GitHub = Cloud platform for Git
+Commit = Snapshot of changes
+Branch = Separate line of development
+Upstream = Default remote branch connection
+
 
 Workflow:
-Working → Staging → Repository
+Working → Staging → Repository → GitHub
