@@ -1,0 +1,11 @@
+GitHub Actions:
+- Used for CI/CD automation
+- Runs workflows on events like push
+
+Workflow:
+- Defined in YAML file
+- Located in .github/workflows/
+
+CI:
+- Continuous Integration
+- Automatically tests code on push
