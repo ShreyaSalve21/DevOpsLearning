@@ -1,4 +1,4 @@
-name: CI
+name: Basic CI
 
 on: [push]
 
@@ -9,5 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a simple command
-        run: echo "CI is running!"
+      - name: Print message
+        run: echo "CI Started"
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls
