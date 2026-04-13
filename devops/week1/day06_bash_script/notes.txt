@@ -1,0 +1,101 @@
+Day 6 : Bash Scripting - Notes (backup.sh)
+1. Shebang Line #!/bin/bash
+- This line tells the system to run the script using the bash shell.
+- Even though file is .sh, it can still use bash.
+
+2. Variables 
+SOURCE_DIR="$1"
+- $1 means first agrument given while running script
+- Example : ./backup.sh/home/user/docs -> SOURCE_DIR = /home/user/docs
+
+BACKUP_DIR="$HOME/backup"
+~ $HOME means current user home directory
+~ Backup folder will be created inside home
+
+3. check if input is Given
+if [ -z "SOURCE_DIR" ]; then
+   echo "Usage : ./backup.sh"
+   exit 1
+fi
+
+~ -z checkes if variable is empty
+~ if user does not given input, script stops using exit 1
+
+
+4. Check if directory Exists
+if [ ! -d "$SOURCE_DIR" ]; then
+   echo Directory does not exists"
+   exit 1
+fi
+
+~ -d checks if directory exists
+~ ! means NOT
+~ if directory is invalid -> script stops
+
+
+5. Create Backup Folder
+mkdir-p "$BACKUP_DIR"
+
+~ mkdir creates folder
+~ -p avoids error if folder already exixts
+
+
+6. Loop Through Files
+for file in "$SOURCE_DIR"/*; do
+
+~ Loop runs for each file in directory
+
+
+7. Check if it is a File
+if [ -f "$file" ]; then
+
+~ -f checks if item is a file not a folder
+
+
+8. Copy File
+cp "$file" "$BACKUP_DIR"
+
+~ cp command copies file to backup directory
+
+
+9. Print Message
+echo "Copied : $ file"
+
+~ show which file is copied
+
+
+10. End Loop
+done
+
+~ Ends the loop
+
+
+11. Final Message 
+echo "Backup completed successfully"
+
+~ Indicates script finished successfully
+
+
+
+Key Concepts Used : 
+
+1. Variables -> $1, $HOME
+2. Condition -> if, fi
+3. Operators :
+     ~ -z -> empty check
+     ~ -d -> directory check
+     ~ -f -> gile check
+4. Loop -> for
+5. Commands -> cp, mkdir, echo
+6. exit -> Stops script
+
+
+
+Workflow :
+
+1. Take directroy as input
+2. Validate input
+3. Check if directory exists
+4. Create backup folder
+5. Copy files
+6. Display success message

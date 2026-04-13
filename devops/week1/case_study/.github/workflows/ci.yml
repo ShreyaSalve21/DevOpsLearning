@@ -1,0 +1,21 @@
+name: CI Pipeline
+
+on :
+   push:
+
+jobs:
+   build:
+       runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Show build time
+              run: echo "Build started at $(date)"
+
+            - name: Run system info script
+              run: |
+                 chmod +x scripts/system_info.sh
+                 ./scripts/system_info.sh
+
