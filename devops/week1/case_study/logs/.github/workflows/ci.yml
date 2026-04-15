@@ -1,0 +1,19 @@
+name: Basic CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+   
+    - name: Show message
+      run: echo "CI is running"
+
+    - name: Run Script
+      run: bash scripts/system_info.sh
+
