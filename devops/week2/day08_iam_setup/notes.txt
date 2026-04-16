@@ -1,0 +1,12 @@
+Day 08: AWS IAM Setup
+
+- Installed AWS CLI
+- Configured using aws configure
+- Tested commands:
+  - aws iam list-users
+  - aws sts get-caller-identity
+
+- Learned:
+  - IAM Users, Roles, Policies
+  - Programmatic access
+
