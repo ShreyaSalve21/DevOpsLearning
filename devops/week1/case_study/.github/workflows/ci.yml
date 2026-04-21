@@ -15,7 +15,5 @@ jobs:
               run: echo "Build started at $(date)"
 
             - name: Run system info script
-              run: |
-                 chmod +x scripts/system_info.sh
-                 ./scripts/system_info.sh
+              run: bash devops/week1/case_study/scripts/system_info.sh
 
