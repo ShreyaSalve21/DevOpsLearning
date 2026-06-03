@@ -20,3 +20,6 @@ Logs :
 ## How to Run Locally :
 chmod +x scripts/system_info.sh
 ./scripts/system_info.sh
+
+Testing PR Trigger
+
